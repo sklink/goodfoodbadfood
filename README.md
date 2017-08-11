@@ -34,8 +34,9 @@ Non-technical requirements include:
 
 Bonus requirements:
 - [ ] Run on Ionic
+- [ ] Utilize Reselect and Immutable.js
 - [ ] Pull data using GraphQL using Redux Sagas
-- [ ] Demonstrate natural animations
+- [ ] Animations
 
 ## Overview
 
