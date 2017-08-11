@@ -1,10 +1,6 @@
-# BMH Demo
+# GoodFoodBadFood
 
-Hey Evan,
-
-Thanks for giving me the opportunity to demo my work.
-If you have any questions or would like to run through this with
-me don't hesitate to reach out.
+Reviewing food purchases to make healthier decisions in grocery stores and at restaurants.
 
 ## Requirements
 
