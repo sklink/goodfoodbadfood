@@ -13,6 +13,10 @@ export function HttpLoaderFactory(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
+// Redux
+import { NgReduxModule, NgRedux } from '@angular-redux/store';
+import { IAppState, store } from './redux/store';
+
 // App Start
 import { MyApp } from './app.component';
 
@@ -36,7 +40,8 @@ import { HomePage } from '../pages/home/home';
         useFactory: HttpLoaderFactory,
         deps: [Http]
       }
-    })
+    }),
+    NgReduxModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,4 +54,9 @@ import { HomePage } from '../pages/home/home';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule {
+  // Setup our Redux store
+  constructor(ngRedux: NgRedux<IAppState>) {
+    ngRedux.provideStore(store);
+  }
+}
