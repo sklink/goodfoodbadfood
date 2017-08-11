@@ -14,7 +14,7 @@ export interface IAppState {
 };
 
 // Create the App store
-export const store: Store<InitialAppState> = createStore(
+export const store: Store<IAppState> = createStore(
   rootReducer,
   applyMiddleware(createLogger())
 );
