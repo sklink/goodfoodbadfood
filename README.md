@@ -2,7 +2,28 @@
 
 Reviewing food purchases to make healthier decisions in grocery stores and at restaurants.
 
-## Requirements
+## Running the application
+
+Ensure you have Ionic installed:
+```bash
+$ sudo npm install -g ionic cordova
+$ ionic start myBlank blank
+```
+Serve the app in the browser:
+
+```bash
+$ ionic serve
+```
+
+Run on a device or simulator:
+
+```bash
+$ ionic cordova run ios
+```
+
+Substitute `ios` for `android` if you're not on Mac, or if you'd simply like to test within Android.
+
+## Project Requirements
 
 Demonstrate proficiency with the following technologies:
 - [ ] Angular 2
@@ -192,26 +213,3 @@ Three checkboxes to toggle communication methods:
     > Header
     > Checkbox
 ```
-
-### /src/components
-
-## Running the application
-
-Ensure you have Ionic installed:
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-Serve the app in the browser:
-
-```bash
-$ ionic serve
-```
-
-Run on a device or simulator:
-
-```bash
-$ ionic cordova run ios
-```
-
-Substitute `ios` for `android` if you're not on Mac, or if you'd simply like to test within Android.
