@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,25 +14,23 @@ export function HttpLoaderFactory(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-// Redux
-import { NgReduxModule, NgRedux } from '@angular-redux/store';
-import { IAppState, store } from './redux/store';
-
 // App Start
 import { MyApp } from './app.component';
 
 // Pages
 import { HomePage } from '../pages/home/home';
-import { SettingsPage } from '../pages/settings/settings.component';
+
+// Global Modules
+import { StoreModule } from './store/store.module';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    SettingsPage
+    HomePage
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(MyApp, {
       mode: 'md'
     }),
@@ -43,13 +42,12 @@ import { SettingsPage } from '../pages/settings/settings.component';
         deps: [Http]
       }
     }),
-    NgReduxModule
+    StoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    SettingsPage
+    HomePage
   ],
   providers: [
     StatusBar,
@@ -57,9 +55,4 @@ import { SettingsPage } from '../pages/settings/settings.component';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {
-  // Setup our Redux store
-  constructor(ngRedux: NgRedux<IAppState>) {
-    ngRedux.provideStore(store);
-  }
-}
+export class AppModule { }
