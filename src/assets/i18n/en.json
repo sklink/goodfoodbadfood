@@ -1,5 +1,13 @@
 {
   "SETTINGS_PAGE": {
-    "TITLE": "Settings Page"
+    "REVIEW_HEADER": "Weekly review",
+    "EMAIL_TOGGLE_LABEL": "Email",
+    "REMINDER_HEADER": "Reminders",
+    "SMS_TOGGLE_LABEL": "SMS (text messages)",
+    "PUSH_TOGGLE_LABEL": "Push notifications"
+  },
+  "FORMS": {
+    "EMAIL": "Email address",
+    "PHONE": "Phone number"
   }
 }

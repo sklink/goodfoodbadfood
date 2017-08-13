@@ -33,10 +33,11 @@ Non-technical requirements include:
 - [ ] Demonstrate ability to handle large scale reactivity
 
 Bonus requirements:
-- [ ] Run on Ionic
-- [ ] Utilize Reselect and Immutable.js
-- [ ] Pull data using GraphQL using Redux Sagas
+- [x] Run on Ionic
+- [ ] Utilize Immutable.js
+- [ ] Pull data using GraphQL using RxJS
 - [ ] Animations
+- [x] i18n Translations
 
 ## Overview
 
