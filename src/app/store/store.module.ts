@@ -14,7 +14,10 @@ import { rootReducer } from './store.reducer';
 // import { IAppState } from './store.model';
 
 // Build default state... TODO: pull this from localStorage
-const DEFAULT_STATE: any = fromJS({});
+import { INITIAL_STATE as SETTINGS_DEFAULT_STATE } from '../../components/settings/settings.reducer';
+const DEFAULT_STATE: any = fromJS({
+  settings: SETTINGS_DEFAULT_STATE
+});
 
 @NgModule({
   imports: [NgReduxModule]

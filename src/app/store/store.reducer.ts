@@ -4,8 +4,11 @@
 // Redux
 import { combineReducers } from 'redux-immutable';
 
+// Reducers
+import { createSettingsReducer } from '../../components/settings/settings.reducer';
+
 // Constants
-import { GRAPHQL_API_URI } from '../constants';
+// import { GRAPHQL_API_URI } from '../constants';
 
 // Setup GraphQL
 // const networkInterface = createNetworkInterface({ uri: GRAPHQL_API_URI })
@@ -13,5 +16,6 @@ import { GRAPHQL_API_URI } from '../constants';
 
 // List of the reducers used throughout the app...
 export const rootReducer = combineReducers({
+  settings: createSettingsReducer(),
   // apollo: apollo.reducer()
 });

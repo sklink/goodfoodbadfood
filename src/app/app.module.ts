@@ -23,6 +23,9 @@ import { HomePage } from '../pages/home/home';
 // Global Modules
 import { StoreModule } from './store/store.module';
 
+// Component Modules
+import { SettingsModule } from '../components/settings/settings.module';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -42,7 +45,8 @@ import { StoreModule } from './store/store.module';
         deps: [Http]
       }
     }),
-    StoreModule
+    StoreModule,
+    SettingsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

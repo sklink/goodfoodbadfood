@@ -26,17 +26,17 @@ Substitute `ios` for `android` if you're not on Mac, or if you'd simply like to 
 ## Project Requirements
 
 Demonstrate proficiency with the following technologies:
-- [ ] Angular 2
-- [ ] Redux
+- [x] Angular 2
+- [x] Redux
 
 Non-technical requirements include:
 - [ ] Demonstrate ability to handle large scale reactivity
 
 Bonus requirements:
 - [x] Run on Ionic
-- [ ] Utilize Immutable.js
+- [x] Utilize Immutable.js
 - [ ] Pull data using GraphQL using RxJS
-- [ ] Animations
+- [x] Animations
 - [x] i18n Translations
 
 ## Overview
@@ -201,9 +201,9 @@ Meal search page should mirror the product search base with the barcode scanner 
 #### Settings Page
 
 Three checkboxes to toggle communication methods:
-- [ ] SMS
-- [ ] Push notification
-- [ ] Email
+- [x] SMS
+- [x] Push notification
+- [x] Email
 
 "Nutritional Restrictions" section with, what would be, a series of checkboxes. The only checkbox listed will be "Diabetes prevention". This demonstrates the potential to use additional algorithms to identify problematic foods.
 

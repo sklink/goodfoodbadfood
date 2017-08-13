@@ -1,0 +1,45 @@
+<ion-list no-lines>
+  <!-- Weekly Review -->
+  <!---->
+  <ion-list-header>
+    {{ 'SETTINGS_PAGE.REVIEW_HEADER' | translate }}
+  </ion-list-header>
+
+  <!-- Email settings -->
+  <ion-item>
+    <ion-label>{{ 'SETTINGS_PAGE.EMAIL_TOGGLE_LABEL' | translate }}</ion-label>
+    <ion-toggle id="notification-toggle--email" [ngModel]="sendEmailEnabled$ | async" (ionChange)="toggleEmail()"></ion-toggle>
+  </ion-item>
+  <ion-item class="toggle_field" [@toggleField]="(sendEmailEnabled$ | async) ? 'visible' : 'hidden'">
+    <ion-label floating>{{ 'FORMS.EMAIL' | translate }}</ion-label>
+    <ion-input id="notification-email" type="email" [ngModel]="email$ | async" (ionChange)="updateEmail($event)" required></ion-input>
+  </ion-item>
+  <!-- TODO: Set up toggleSaveMessage with an Observable and timeout -->
+  <ion-item class="toggle_field__message" [@toggleSaveMessage]="'hidden'">Saved</ion-item>
+
+  <!-- Reminders -->
+  <!---->
+  <ion-list-header>
+    {{ 'SETTINGS_PAGE.REMINDER_HEADER' | translate }}
+  </ion-list-header>
+
+  <!-- Push notification settings -->
+  <ion-item>
+    <ion-label>{{ 'SETTINGS_PAGE.PUSH_TOGGLE_LABEL' | translate }}</ion-label>
+    <ion-toggle id="notification-toggle--push" [ngModel]="sendPushNotificationsEnabled$ | async" (ionChange)="togglePush()"></ion-toggle>
+  </ion-item>
+
+  <!-- SMS settings -->
+  <ion-item>
+    <ion-label>{{ 'SETTINGS_PAGE.SMS_TOGGLE_LABEL' | translate }}</ion-label>
+    <ion-toggle id="notification-toggle--sms" [ngModel]="sendSMSEnabled$ | async" (ionChange)="toggleSMS()"></ion-toggle>
+  </ion-item>
+
+  <ion-item class="toggle_field" [@toggleField]="(sendSMSEnabled$ | async) ? 'visible' : 'hidden'">
+    <ion-label floating>{{ 'FORMS.PHONE' | translate }}</ion-label>
+    <ion-input id="notification-phone" type="tel" [ngModel]="phone$ | async" (ionChange)="updatePhone($event)" required></ion-input>
+  </ion-item>
+  <!-- TODO: Set up toggleSaveMessage with an Observable and timeout -->
+  <ion-item class="toggle_field__message" [@toggleSaveMessage]="'hidden'">Saved</ion-item>
+
+</ion-list>

@@ -1,1 +1,12 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="bmh">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <settings-menu></settings-menu>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #bmh [root]="rootPage"></ion-nav>
