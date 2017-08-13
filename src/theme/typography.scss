@@ -1,0 +1,9 @@
+@import "./variables";
+
+span[primary] {
+  color: map-get($colors, primary);
+}
+
+span[secondary] {
+  color: map-get($colors, secondary);
+}

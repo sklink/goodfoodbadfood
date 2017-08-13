@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-meals',
+  templateUrl: './meals.html'
 })
-export class HomePage {
-
+export class MealsPage {
   constructor(public navCtrl: NavController) {
 
   }
 
+  goBack() {
+    this.navCtrl.pop();
+  }
 }

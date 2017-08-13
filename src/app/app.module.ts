@@ -17,26 +17,21 @@ export function HttpLoaderFactory(http: Http) {
 // App Start
 import { MyApp } from './app.component';
 
-// Pages
-import { HomePage } from '../pages/home/home';
-
-// Global Modules
+// Modules
 import { StoreModule } from './store/store.module';
-
-// Component Modules
+import { HomePageModule } from '../pages/home/home.module';
+import { GroceriesPageModule } from '../pages/groceries/groceries.module';
+import { MealsPageModule } from '../pages/meals/meals.module';
 import { SettingsModule } from '../components/settings/settings.module';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    IonicModule.forRoot(MyApp, {
-      mode: 'md'
-    }),
+    IonicModule.forRoot(MyApp, { mode: 'md' }),
     HttpModule,
     TranslateModule.forRoot({
       loader: {
@@ -46,13 +41,13 @@ import { SettingsModule } from '../components/settings/settings.module';
       }
     }),
     StoreModule,
+    HomePageModule,
+    GroceriesPageModule,
+    MealsPageModule,
     SettingsModule
   ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage
-  ],
+  bootstrap: [ IonicApp ],
+  entryComponents: [ MyApp ],
   providers: [
     StatusBar,
     SplashScreen,

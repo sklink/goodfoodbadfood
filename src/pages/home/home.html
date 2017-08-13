@@ -3,10 +3,11 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>GoodFoodBadFood</ion-title>
+    <ion-title><span primary>GoodFood</span><span secondary>BadFood</span></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  Home Page
+  <button ion-button (click)="navigateToGroceriesPage()">{{ 'HOME_PAGE.GROCERIES_BUTTON' | translate }}</button>
+  <button ion-button (click)="navigateToMealsPage()">{{ 'HOME_PAGE.MEALS_BUTTON' | translate }}</button>
 </ion-content>

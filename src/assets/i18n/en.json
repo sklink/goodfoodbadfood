@@ -1,4 +1,8 @@
 {
+  "HOME_PAGE": {
+    "GROCERIES_BUTTON": "Groceries",
+    "MEALS_BUTTON": "Meals"
+  },
   "SETTINGS_PAGE": {
     "REVIEW_HEADER": "Weekly review",
     "EMAIL_TOGGLE_LABEL": "Email",
