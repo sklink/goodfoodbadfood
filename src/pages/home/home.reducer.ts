@@ -33,7 +33,6 @@ export function createHomeReducer() {
 
     switch (action.type) {
       case HomeActions.TOGGLE_ITEM_REVIEW_INCLUSION:
-        console.log("IN HOME");
         const group: string = action.payload.group;
         const itemIndex: number = action.payload.itemIndex;
         let item: Map<string, any> = action.payload.item;
@@ -43,7 +42,6 @@ export function createHomeReducer() {
 
         avgRating = getAvgRating(currItemList);
         avgGrade = ratingToGrade(avgRating);
-        console.log(item, group, itemIndex);
 
         state = state.set('avgRating', avgRating);
         state = state.set('avgGrade', avgGrade);
