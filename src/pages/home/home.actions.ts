@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { dispatch } from '@angular-redux/store';
 import { FluxStandardAction } from 'flux-standard-action';
 
-// We don't send anything through to these actions, so null the payload and meta
 type Payload = {
   sortType?: string,
   groupType?: string,
