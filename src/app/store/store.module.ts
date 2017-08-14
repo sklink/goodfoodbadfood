@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
 
 // Redux related
-import { applyMiddleware, } from 'redux';
+// import { applyMiddleware, } from 'redux';
 import { createLogger } from 'redux-logger';
 import { fromJS } from 'immutable';
 

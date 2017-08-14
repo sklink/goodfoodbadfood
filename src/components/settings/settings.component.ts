@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { select, select$, NgRedux } from '@angular-redux/store';
+import { select } from '@angular-redux/store';
 import { Observable } from 'rxjs/Observable';
 
 // Constants

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { Action } from 'redux';
-import { fromJS, List, Collection } from 'immutable';
+import { fromJS, List } from 'immutable';
 
 import { SORT_TYPE_LIST, GROUP_TYPE_LIST } from './home.constants';
 import { INITIAL_STATE_DATA } from './home.initial-state';

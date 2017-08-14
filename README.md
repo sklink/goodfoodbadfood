@@ -7,13 +7,22 @@ Reviewing food purchases to make healthier decisions in grocery stores and at re
 Ensure you have Ionic installed:
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
 ```
+
+Clone the app and install dependencies:
+```bash
+$ git clone https://github.com/sklink/goodfoodbadfood
+$ cd goodfoodbadfood
+$ npm install
+```
+
 Serve the app in the browser:
 
 ```bash
 $ ionic serve
 ```
+
+Press F12 and toggle the browser device simulator.
 
 Run on a device or simulator:
 
