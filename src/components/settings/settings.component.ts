@@ -41,7 +41,7 @@ export class SettingsMenu {
 
   @select(['settings', 'sendPushNotifications', 'isEnabled']) readonly sendPushNotificationsEnabled$: Observable<boolean>;
 
-  constructor(private actions: SettingsActions, private store: NgRedux<any>) { }
+  constructor(private actions: SettingsActions) { }
 
   /* NOTE: I had considered consolidating these into generic communication methods
    * to keep with DRY but felt that with the simplicity of the app it made

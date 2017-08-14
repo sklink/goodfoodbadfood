@@ -1,3 +1,65 @@
-page-home {
+.grade {
+  background: #F68E2C;
+  border-radius: 80px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  color: #FFF;
+  font-size: 60px;
+  margin: 16px auto 32px;
+  padding: 26px;
+  text-align: center;
+  width: 126px;
+}
 
+.caption {
+  text-align: center;
+  font-size: 21px;
+  margin-bottom: 11px;
+}
+
+.list_grade {
+  border-radius: 80px;
+  background: #307CC0;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 0.8em;
+  height: 24px;
+  line-height: 25px;
+  text-align: center;
+  width: 24px;
+}
+
+.A_plus {
+  background: #F68E2C;
+}
+
+.A {
+  background: #DA8B41;
+}
+
+.B_plus {
+  background: #C38952;
+}
+
+.B {
+  background: #AD8762;
+}
+
+.C_plus {
+  background: #938576;
+}
+
+.C {
+  background: #7A8389;
+}
+
+.D_plus {
+  background: #61809B;
+}
+
+.D {
+  background: #467BE0;
+}
+
+.F {
+    background: #307CC0;
 }

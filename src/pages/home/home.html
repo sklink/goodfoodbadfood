@@ -8,6 +8,69 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="navigateToGroceriesPage()">{{ 'HOME_PAGE.GROCERIES_BUTTON' | translate }}</button>
-  <button ion-button (click)="navigateToMealsPage()">{{ 'HOME_PAGE.MEALS_BUTTON' | translate }}</button>
+  <div [ngClass]="[(avgGrade$ | async).get('class'), 'grade']">{{ (avgGrade$ | async).get('label') }}</div>
+  <!-- FIXME: The below [translate] is not necessarily safe.
+    If a caption is not defined that is a problem. NgSwitch is an alternative -->
+  <div class="caption" [translate]="'HOME_PAGE.CAPTION.' + (avgGrade$ | async).get('class')"></div>
+  <ion-row padding-horizontal padding-top>
+    <ion-col>
+      <button no-margin full ion-button icon-start (click)="navigateToGroceriesPage()">
+        <ion-icon name="cart"></ion-icon>
+        {{ 'HOME_PAGE.GROCERIES_BUTTON' | translate }}
+      </button>
+    </ion-col>
+    <ion-col>
+      <button no-margin full ion-button icon-start (click)="navigateToMealsPage()">
+        <ion-icon name="restaurant"></ion-icon>
+        {{ 'HOME_PAGE.MEALS_BUTTON' | translate }}
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-card>
+    <ion-item>
+      <ion-label>Dietary restrictions: </ion-label>
+      <ion-select multiple="true" (ionChange)="setFilterRestrictions($event)" placeholder="None">
+        <ion-option [selected]="(restrictions$ | async).includes('Fat')" value="Fat">Fat</ion-option>
+        <ion-option [selected]="(restrictions$ | async).includes('Sodium')" value="Sodium">Sodium</ion-option>
+        <ion-option [selected]="(restrictions$ | async).includes('Carbohydrates')" value="Carbohydrates">Carbohydrates</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Include items from:</ion-label>
+      <ion-select multiple="true" (ionChange)="setTypeFilters($event)" placeholder="None">
+        <ion-option [selected]="(types$ | async).includes('Meals')" value="Meals">Meals</ion-option>
+        <ion-option [selected]="(types$ | async).includes('Groceries')" value="Groceries">Groceries</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sort food by: </ion-label>
+      <ion-select [ngModel]="sortBy$ | async" (ionChange)="setSortBy($event)">
+        <ion-option value='grade'>Grading</ion-option>
+        <ion-option value='name'>Name</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Group food by: </ion-label>
+      <ion-select [ngModel]="groupBy$ | async" (ionChange)="setGroupBy($event)">
+        <ion-option value='restriction'>Nutritional restriction</ion-option>
+        <ion-option value='type'>Type</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <div *ngFor="let group of (items$ | async).keySeq();">
+      <ion-item-group *ngIf="groupShouldRender(group, groupBy$ | async, restrictions$ | async, types$ | async)">
+        <ion-item-divider color="light">{{group}}</ion-item-divider>
+        <food-list-item
+          *ngFor="let item of (items$ | async).get(group); trackBy: trackByName; let i = index;"
+          [item]="item"
+          [itemIndex]="i"
+          [group]="group"
+          [toggleAction]="actions.toggleItemReviewInclusion">
+        </food-list-item>
+      </ion-item-group>
+    </div>
+  </ion-card>
 </ion-content>

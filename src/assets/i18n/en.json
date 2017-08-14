@@ -1,7 +1,18 @@
 {
   "HOME_PAGE": {
-    "GROCERIES_BUTTON": "Groceries",
-    "MEALS_BUTTON": "Meals"
+    "CAPTION": {
+      "A_plus": "Great job, keep it up!",
+      "A": "Great job, keep it up!",
+      "B_plus": "Good job, look for optimizations below.",
+      "B": "Good job, look for optimizations below.",
+      "C_plus": "Some good choices, review items more carefully.",
+      "C": "Some good choices, review items more carefully.",
+      "D_plus": "You're putting yourself at risk.",
+      "D": "You're putting yourself at risk.",
+      "F": "You need to make immediate changes."
+    },
+    "GROCERIES_BUTTON": "Add Groceries",
+    "MEALS_BUTTON": "Add Meals"
   },
   "SETTINGS_PAGE": {
     "REVIEW_HEADER": "Weekly review",

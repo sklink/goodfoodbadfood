@@ -1,0 +1,5 @@
+<ion-item *ngIf="!item.get('hidden')">
+  <ion-checkbox item-start [checked]="!item.get('inactive')" (ionChange)="emitToggleAction(group, itemIndex, item)"></ion-checkbox>
+  <ion-label>{{item.get('name')}}</ion-label>
+  <span [ngClass]="[item.getIn(['grade', 'class']), 'list_grade']" item-end>{{item.getIn(['grade', 'label'])}}</span>
+</ion-item>

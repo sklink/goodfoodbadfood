@@ -30,19 +30,20 @@ Demonstrate proficiency with the following technologies:
 - [x] Redux
 
 Non-technical requirements include:
-- [ ] Demonstrate ability to handle large scale reactivity
+- [x] Demonstrate ability to handle large scale reactivity
 
 Bonus requirements:
 - [x] Run on Ionic
 - [x] Utilize Immutable.js
 - [ ] Pull data using GraphQL using RxJS
-- [x] Animations
+- [x] Animations (see email and phone field after hitting settings toggle)
 - [x] i18n Translations
 
 ## Overview
 
 Given that the functionality options were wide open, I thought it best
-to approach something relevant to Blue Mesa.
+to approach something relevant to nutrition habits for those with dietary
+restrictions.
 
 ### User Journey: Alice
 
@@ -52,7 +53,7 @@ I use GoodFoodBadFood at the grocery store to:
 - [ ] tell me whether food I'm browsing fits within my health goals;
 
 I accomplish this by:
-- [ ] tapping "Groceries" to navigate from the "Review" page to the item search page;
+- [x] tapping "Add Groceries" to navigate from the "Review" page to the item search page;
 - [ ] scanning the bar code of food I'm looking at and receiving a simple good food or bad food rating, with a reason why;
 - [ ] if the item doesn't have a bar code, I use a search to find the item I'm looking at;
 
@@ -60,14 +61,15 @@ I use GoodFoodBadFood at a restaurant to:
 - [ ] tell me whether a meal option I'm looking at fits my health goals;
 
 I accomplish this by:
-- [ ] tapping "Meals" to navigate from the "Review" page to the meal search page;
+- [x] tapping "Add Meals" to navigate from the "Review" page to the meal search page;
 - [ ] typing in the meal name to search for it, or something close to it;
 
 I use GoodFoodBadFood at home or on my down time to:
-- [ ] review my diet to identify items I should substitute, knowing that purchasing the right things alone doesn't mean I've kept to the diet I need;
+- [x] review my diet to identify items I should substitute;
+- [ ] **Algorithm shouldn't just average purchase habits, it should be based on recommended intake during that period.**
 
 I accomplish this by:
-- [ ] opening GoodFoodBadFood; the review page is right on the home screen so I always get reminders about how I'm doing.
+- [x] opening GoodFoodBadFood; the review page is right on the home screen so I always get reminders about how I'm doing.
 
 I am reminded to use GoodFoodBadFood when I'm at home because it:
 - [ ] sends a weekly SMS, Push notification, or Email with a review of my diet accomplishments; the communication method is my choice.
@@ -97,12 +99,12 @@ Although some of these we can approach ourselves, these providers will reduce th
 #### Home Page
 
 The home page should contain two links, "Meals" and "Groceries" that link out to the Meal Search and Product (Grocery) Search pages respectively.
-- [ ] "Meals" link
-- [ ] "Groceries" link
+- [x] "Meals" link
+- [x] "Groceries" link
 
 When the user has not added any groceries yet, the interface should use demo data to show the user what it'll look like when they invest the time to add items.
 - [ ] Demo review data
-- [ ] Load demo when no data is available
+- [x] Load demo when no data is available
 
 Above the review information a week control should allow the user to navigate to past weeks. The user needs to be able to quickly get back to the current week.
 - [ ] Week navigation control
@@ -113,17 +115,17 @@ The review information needs to show:
 - a message describing the meaning of the letter, encouraging or congratulating them depending on the score
 
 
-- [ ] Use the GPA system to match letters to our number evaluation
-- [ ] Build severity levels, ensure this matches the results our algorithm outputs
+- [x] Use the grading system to match letters to our number evaluation
+- [x] Build severity levels, ensure this matches the results our algorithm outputs
 
 If the user has a score less than A+, a list of items they added within that time period should show below the rating with a message "What would your score be without..." and checkboxes to allow them to toggle off and on to see the adjusted score.
 
-- [ ] List of items with checkboxes
-- [ ] Checkboxes toggle a "preview" score
+- [x] List of items with checkboxes
+- [x] Checkboxes toggle a "preview" score
 
 In order to gain more value from the list, the user should be able to:
-- [ ] Sort by various health criteria
-- [ ] Split into various food types
+- [x] Sort by various health criteria
+- [x] Split into various food types
 - [ ] "Check all" option for each section
 
 ##### Components

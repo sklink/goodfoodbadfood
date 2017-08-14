@@ -1,0 +1,9 @@
+// ion-content Vertical layouts for ion-content rows
+ion-col.flex-vertical, ion-content.flex-vertical .scroll-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}

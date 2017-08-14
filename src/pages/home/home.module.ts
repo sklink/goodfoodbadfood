@@ -7,14 +7,17 @@ import { SharedModule } from '../../app/shared/shared.module';
 
 // Local
 import { HomePage } from './home.component';
+import { HomeActions } from './home.actions';
+import { FoodListItem } from '../../components/food-list-item/food-list-item.component';
 
 @NgModule({
-  declarations: [ HomePage ],
+  declarations: [ HomePage, FoodListItem ],
   imports: [
     StoreModule,
     SharedModule,
     IonicPageModule.forChild(HomePage)
   ],
-  entryComponents: [ HomePage ]
+  entryComponents: [ HomePage ],
+  providers: [ HomeActions ]
 })
 export class HomePageModule { }
