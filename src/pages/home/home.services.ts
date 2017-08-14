@@ -107,14 +107,6 @@ export const groupItems = (groupBy: string, items) => {
 /*
  * Rating & Grading Methods
  */
-const sumRatingReducer = (sum: number, item: Map<string, any>) => {
-  if (!item.get('hidden') && !item.get('inactive')) {
-    sum += item.get('rating');
-  }
-
-  return sum;
-};
-
 const setItemGrade = (filterRestrictions: List<string>, item: Map<string, any>) => {
   let itemRestrictions: Map<string, number> = item.get('restrictions');
   let avg: number = 5;
@@ -150,11 +142,14 @@ export const getAvgRating = (items) => {
   let totalRating: number = 0;
   let count: number = 0;
 
-  totalRating = items.reduce((total: number, group: any, key: string) => {
-    count += group.count();
-
-    return group.reduce(sumRatingReducer, total);
-  }, 0);
+  items.forEach((group) => {
+    group.forEach((item) => {
+      if (!item.get('hidden') && !item.get('inactive')) {
+        totalRating += item.get('rating');
+        count += 1;
+      }
+    });
+  });
 
   return count > 0 ? totalRating / count : 0;
 };
